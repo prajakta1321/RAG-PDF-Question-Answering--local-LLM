@@ -18,6 +18,7 @@ Check using:
 ```bash
 
 python --version
+```
 
 # Install Ollama from:
 
@@ -25,35 +26,47 @@ https://ollama.com/
 
 Pull the required model:
 
+```
 ollama pull mistral
+```
 
 Check if it is installed properly using :
 
+```
 run ollama mitral
+```
 
 # Create Virtual Environment
 
+```
 python -m venv venv
+```
 
 # Activate Virtual Environment
 
 For Windows
 
+```
 .\venv\Scripts\activate
+```
 
 # Install Dependencies
 
+```
 pip install -r requirements.txt
+```
 
 # Running the Application
 
 Run the Streamlit app using:
 
+```
 streamlit run app.py
+```
 
 The browser opens.
 
-## How It Works (Architecture)
+# How It Works (Architecture)
 
 1.User uploads a PDF document.
 
