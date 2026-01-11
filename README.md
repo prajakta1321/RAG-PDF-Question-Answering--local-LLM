@@ -7,7 +7,71 @@ It allows users to upload a PDF document and ask questions, ensuring that answer
 
 The application runs completely locally using **Ollama**, ensuring data privacy and avoiding the use of paid APIs.
 
-# Current Progress :
+# INSTALLATION : 
+
+# Python : 
+
+- Python 3.10 or above  
+
+Check using:
+
+```bash
+
+python --version
+
+# Install Ollama from:
+
+https://ollama.com/
+
+Pull the required model:
+
+ollama pull mistral
+
+Check if it is installed properly using :
+
+run ollama mitral
+
+# Create Virtual Environment
+
+python -m venv venv
+
+# Activate Virtual Environment
+
+For Windows
+
+.\venv\Scripts\activate
+
+# Install Dependencies
+
+pip install -r requirements.txt
+
+# Running the Application
+
+Run the Streamlit app using:
+
+streamlit run app.py
+
+The browser opens.
+
+## How It Works (Architecture)
+
+1.User uploads a PDF document.
+
+2.Text is extracted using PyPDFLoader.
+
+3.Text is split into overlapping chunks (500 characters with 50 overlap).
+
+4.Chunks are converted into embeddings using sentence-transformers.
+
+5.Embeddings are stored in a Chroma vector database.
+
+6.User asks a question.
+
+7.Relevant chunks are retrieved and passed to the LLM (Mistral via Ollama).
+
+8. The model generates a context-aware answer.
+
+# Progress :
 
 Streamlit-based web interface:
 
